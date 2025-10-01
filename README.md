@@ -6,11 +6,11 @@ This repository contains a **recruiter-ready, advanced text summarization projec
 
 ## 🚀 Project Overview
 
-The goal of this project is to build an **abstractive text summarization system** that can generate concise summaries from long news articles. The project includes:
+The goal of this project is to build an **abstractive text summarization system** that generates concise summaries from long news articles. The project includes:
 
-- Advanced preprocessing (cleaning, sliding window for long articles)
+- Advanced preprocessing with cleaning and sliding window for long articles
 - Optional extractive + abstractive hybrid summarization
-- Fine-tuning with gradient accumulation, learning rate scheduling, early stopping
+- Fine-tuning with gradient accumulation, learning rate scheduling, and early stopping
 - Evaluation using **ROUGE** and **BERTScore**
 - Beam search and top-k/top-p inference for improved summaries
 - Visualization of generated summaries and metrics
@@ -21,52 +21,27 @@ The goal of this project is to build an **abstractive text summarization system*
 
 ## 📂 Dataset
 
-- **CNN/DailyMail** (version 3.0.0)
-- Alternatively, you can experiment with **XSum**
-- Notebook uses a small subset for demo, designed to scale to full datasets
+- **CNN/DailyMail** (version 3.0.0)  
+- Optionally, you can experiment with **XSum**  
+- Notebook uses a small subset for demonstration, designed to scale to full datasets
 
 ---
 
 ## 🔧 Features & Highlights
 
-1. **Data Preprocessing**
-   - Removes HTML tags and extra whitespace
-   - Splits long articles into chunks
-   - Optional extractive sentence selection
-
-2. **Model Setup**
-   - Uses `facebook/bart-large-cnn` from HuggingFace
-   - GPU support if available
-
-3. **Training**
-   - Gradient accumulation
-   - Early stopping on validation ROUGE
-   - Mixed-precision support
-
-4. **Inference**
-   - Beam search with length penalty
-   - Top-k / top-p sampling
-   - Compare multiple decoding strategies
-
-5. **Evaluation**
-   - ROUGE-1, ROUGE-2, ROUGE-L
-   - BERTScore for semantic similarity
-   - Visual comparison of generated vs reference summaries
-
-6. **Visualization**
-   - Summary length vs article length
-   - ROUGE score bar charts
-   - Side-by-side original vs generated summaries
-
-7. **Deployment**
-   - Model and tokenizer saved for inference
-   - Optional interactive Streamlit interface
+- **Data Preprocessing**: Removes HTML tags, extra whitespace, splits long articles into chunks, optional extractive sentence selection  
+- **Model Setup**: Uses `facebook/bart-large-cnn` from HuggingFace, GPU support if available  
+- **Training**: Gradient accumulation, early stopping on validation ROUGE, mixed-precision support  
+- **Inference**: Beam search with length penalty, top-k / top-p sampling, comparison of decoding strategies  
+- **Evaluation**: ROUGE-1, ROUGE-2, ROUGE-L, BERTScore, visual comparison of generated vs reference summaries  
+- **Visualization**: Summary length vs article length, ROUGE score bar charts, side-by-side text comparison  
+- **Deployment**: Model and tokenizer saved for inference, optional Streamlit interface  
 
 ---
 
 ## 📝 How to Run
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/<your-username>/Advanced-BART-Text-Summarization.git
